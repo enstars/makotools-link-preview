@@ -1,0 +1,115 @@
+@import url("../public/font/latin.css");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #02092c;
+}
+
+body {
+    margin: 0;
+    background: transparent;
+}
+.esog-wrapper {
+    background: #02092c;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    width: 1200px;
+    height: 630px;
+    border-radius: 20px;
+    /* border-bottom: solid 60px #0c195c; */
+    overflow: hidden;
+    position: relative;
+}
+
+.esog-wrapper::before {
+    content: '';
+    position: absolute;
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 700px;
+    border-left: solid 40px #e9eaef;
+    border-bottom: solid 310px #e9eaef;
+    border-top: solid 310px transparent;
+    border-right: solid 40px transparent;
+    z-index: 2;
+}
+
+
+
+.esog-wrapper::after {
+    content: '';
+    position: absolute;
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    border-left: solid 80px var(--color);
+    border-bottom: solid 80px transparent;
+    border-top: solid 80px var(--color);
+    border-right: solid 80px transparent;
+    z-index: 2;
+}
+
+.esog-background {
+    position: absolute;
+    height: 570px;
+    width: 500px;
+    top: 0px;
+    left: 700px;
+    z-index: 1;
+}
+
+.esog-character-image {
+    position: absolute;
+    width: 1200px;
+    height: auto;
+    top: -200px;
+    left: 350px;
+    z-index: 3;
+}
+
+.esog-content {
+    background: #e9eaef;
+    color: #0c195c;
+    position: absolute;
+    height: 570px;
+    width: 700px;
+    top: 0px;
+    z-index: 2;
+    padding: 90px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.esog-character__name {
+    font-size: 120px;
+    line-height: 1;
+    word-spacing: 100vw;
+}
+
+.esog-footer {
+    background: #0c195c;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 570px;
+    left: 0px;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 15px 25px;
+}

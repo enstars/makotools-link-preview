@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+  background: black;
+}
+
+.preview {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}

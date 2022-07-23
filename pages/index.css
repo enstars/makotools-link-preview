@@ -139,7 +139,7 @@ body {
 
 .card-stats {
   display: flex;
-  gap: 8px;
+  /* gap: 8px; */
 }
 .card-stat {
   flex: 1 1 0;
@@ -151,9 +151,11 @@ body {
 }
 .card-stat-2 {
   background: #2c3347;
+  margin-left: 8px;
 }
 .card-stat-3 {
   background: #3a4259;
+  margin-left: 8px;
 }
 
 .card-stat-desc {

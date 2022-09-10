@@ -8,6 +8,9 @@ function Character({
   stats2 = "???",
   stats3 = "???",
   path = "",
+  skill1desc,
+  skill2desc,
+  skill3desc,
 }) {
   console.log(title);
   return (
@@ -26,31 +29,54 @@ function Character({
         </div>
         <div className="card-stats">
           <div className="card-stat card-stat-1">
-            <div className="card-stat-desc dimmed">1 copy</div>
+            <div className="card-stat-desc dimmed">1x</div>
             {stats1}
           </div>
           <div className="card-stat card-stat-2">
-            <div className="card-stat-desc dimmed">3 copies</div>
+            <div className="card-stat-desc dimmed">3x</div>
             {stats2}
           </div>
           <div className="card-stat card-stat-3">
-            <div className="card-stat-desc dimmed">5 copies</div>
+            <div className="card-stat-desc dimmed">5x</div>
             {stats3}
           </div>
         </div>
-        <div class="soon dimmed">more info coming soon!</div>
+        {(skill1desc || skill2desc || skill3desc) && (
+          <div className="card-section-title">Skills</div>
+        )}{" "}
+        <div className="card-skills">
+          {skill1desc && (
+            <div className="card-skill card-skill-center">
+              <div className="card-skill-name dimmed">Center</div>
+              {skill1desc}
+            </div>
+          )}
+          {skill2desc && (
+            <div className="card-skill card-skill-live">
+              <div className="card-skill-name dimmed">Live</div>
+              {skill2desc}
+            </div>
+          )}
+          {skill3desc && (
+            <div className="card-skill card-skill-support">
+              <div className="card-skill-name dimmed">Support</div>
+              {skill3desc}
+            </div>
+          )}
+        </div>
+        {/* <div class="soon dimmed">more info coming soon!</div> */}
       </div>
       <img
         className="card-image1"
-        src={`https://assets.ensemble.link/assets/${image1}`}
+        src={`https://assets.enstars.link/assets/${image1}`}
       />
       <img
         className="card-image2"
-        src={`https://assets.ensemble.link/assets/${image2}`}
+        src={`https://assets.enstars.link/assets/${image2}`}
       />
       <img
         className="card-image-bg"
-        src={`https://assets.ensemble.link/assets/${image2}`}
+        src={`https://assets.enstars.link/assets/${image2}`}
       />
     </Layout>
   );

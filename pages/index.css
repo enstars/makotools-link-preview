@@ -130,7 +130,7 @@ body {
 
 .card-section-title {
   font-size: 1.8em;
-  margin-top: 1em;
+  margin-top: 0.8em;
   margin-bottom: 0.3em;
   font-weight: 700;
   display: flex;
@@ -159,8 +159,16 @@ body {
 }
 
 .card-stat-desc {
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: 500;
+  display: inline;
+  margin-right: 0.75em;
+}
+
+.card-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .soon {
@@ -170,3 +178,48 @@ body {
   margin-top: 5em;
   letter-spacing: 0.05em;
 }
+
+.card-skill {
+  --color: rgb(60, 89, 209);
+  padding: 0.25em 0em;
+  font-size: 1.5em;
+  font-weight: 500;
+
+  /* border-left: solid 8px transparent; */
+  padding-left: 1em;
+  position: relative;
+}
+
+.card-skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--color);
+  border-radius: 999px;
+}
+
+.card-skill-live {
+  --color: rgb(51, 154, 240);
+}
+.card-skill-support {
+  --color: rgb(81, 207, 102);
+}
+
+.card-skill-name {
+  /* font-size: 0em; */
+  font-weight: 700;
+  padding: 0.1em;
+  display: inline-block;
+  margin-right: 0.25em;
+  color: var(--color);
+  opactiy: 0.5;
+}
+
+/* 
+// rgb(60, 89, 209) none repeat scroll 0% 0%
+// rgb(51, 154, 240) none repeat scroll 0% 0%
+// rgb(81, 207, 102) none repeat scroll 0% 0%
+ */

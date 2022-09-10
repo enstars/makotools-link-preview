@@ -168,7 +168,7 @@ body {
 .card-skills {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  /* gap: 12px; */
 }
 
 .soon {
@@ -188,6 +188,7 @@ body {
   /* border-left: solid 8px transparent; */
   padding-left: 1em;
   position: relative;
+  margin-top: 12px;
 }
 
 .card-skill::before {

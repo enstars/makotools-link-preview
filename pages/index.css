@@ -1,5 +1,3 @@
-@import url("../public/font/latin.css");
-
 * {
   box-sizing: border-box;
   --bc: #2c3347;
@@ -26,39 +24,6 @@ body {
   margin: 0;
   background: transparent;
 }
-.wrapper {
-  background: rgb(23, 25, 33);
-  background: #12141c;
-  font-family: "Inter var", "Inter";
-  font-weight: 400;
-  width: 1200px;
-  height: 630px;
-  /* border-radius: 20px; */
-  /* border-bottom: solid 60px #0c195c; */
-  overflow: hidden;
-  position: relative;
-}
-
-.footer {
-  background: rgb(23, 25, 33);
-  background: #212736;
-  position: absolute;
-  height: 50px;
-  width: 100%;
-  top: 580px;
-  left: 0px;
-  z-index: 5;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  padding: 15px 25px;
-  border-top: 3px solid rgb(44, 51, 71);
-}
 
 .makotools {
   font-family: "Sora";
@@ -67,80 +32,6 @@ body {
 
 /* CARD */
 
-.card-image1 {
-  position: absolute;
-  height: 250px;
-  aspect-ratio: 4/5;
-  top: 316px;
-  left: 256px;
-  z-index: 4;
-  border-radius: 8px;
-  object-fit: cover;
-  border: solid 3px var(--bc);
-  transform: rotate(4deg);
-  background: #212736;
-}
-.card-image2 {
-  position: absolute;
-  width: 440px;
-  height: 550px;
-  top: 16px;
-  left: 16px;
-  z-index: 3;
-  border-radius: 16px;
-  object-fit: cover;
-  border: solid 3px var(--bc);
-  background: #212736;
-}
-.card-image-bg {
-  position: absolute;
-  width: 500px;
-  height: 600px;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  border-radius: 16px;
-  object-fit: cover;
-  border: solid 3px var(--bc);
-  transform: scale(1.2);
-  filter: blur(30px);
-  opacity: 0.3;
-}
-
-.card-info {
-  background: rgb(25, 28, 39);
-  color: rgb(211, 214, 224);
-  position: absolute;
-  height: 580px;
-  width: 730px;
-  top: 0px;
-  left: calc(440px + 32px);
-  z-index: 2;
-  padding: 36px;
-}
-
-.card-title {
-  font-size: 2.8em;
-  font-weight: 800;
-}
-.card-name {
-  font-size: 2em;
-  font-weight: 600;
-}
-
-.card-section-title {
-  font-size: 1.8em;
-  margin-top: 0.8em;
-  margin-bottom: 0.3em;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-stats {
-  display: flex;
-  /* gap: 8px; */
-}
 .card-stat {
   flex: 1 1 0;
   background: #212736;

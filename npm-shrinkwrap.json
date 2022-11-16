@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@vercel/og": {
+      "version": "0.0.20",
+      "from": "@vercel/og@0.0.20",
+      "dependencies": {
+        "satori": {
+          "version": "0.0.44",
+          "from": "0.0.43"
+        }
+      }
+    }
+  }
+}

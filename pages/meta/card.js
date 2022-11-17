@@ -16,21 +16,22 @@ function Character({
   return (
     <Layout path={path}>
       <img
-        width={500}
+        // width={540}
+        width={1240}
         height={600}
         style={{
           position: "absolute",
-          top: 0,
+          top: -20,
           left: 0,
-          filter: "blur(30px)",
           objectFit: "cover",
+          filter: "blur(30px) saturate(140%)",
         }}
         src={`https://assets.enstars.link/assets/${image2}`}
       />
 
       <div
         style={{
-          background: "rgb(25, 28, 39)",
+          background: "rgb(25, 28, 39, 0.75)",
           color: "rgb(211, 214, 224)",
           position: "absolute",
           display: "flex",
@@ -61,7 +62,9 @@ function Character({
             marginBottom: 4.8,
             fontWeight: 700,
             display: "flex",
-            justifyContent: "space-between",
+            // justifyContent: "space-between",
+            width: "100%",
+            alignItems: "flex-end",
           }}
         >
           Stats
@@ -70,57 +73,41 @@ function Character({
           </span>
         </div>
         <div style={{ display: "flex", width: "100%", gap: 12 }}>
-          <div
-            style={{
-              flexGrow: 1,
-              flexShrink: 1,
-              flexBasis: 0,
-              background: "#212736",
-              padding: "8px 11px",
-              fontSize: 32,
-              fontWeight: 500,
-              borderRadius: 8,
-              display: "flex",
-              alignItems: "flex-end",
-            }}
-          >
-            <div style={{ fontSize: 12.8, color: "#8e97ad", marginRight: 12 }}>
-              1x
+          {[
+            { count: 1, stat: stats1, color: "rgb(255, 255, 255, 0.2)" },
+            // { count: 3, stat: stats2, color: "#2c3347" },
+
+            { count: 5, stat: stats2, color: "rgb(255, 255, 255, 0.2)" },
+          ].map((s) => (
+            <div
+              key={s.count}
+              style={{
+                flexGrow: 1,
+                flexShrink: 1,
+                flexBasis: 0,
+                background: s.color,
+                padding: "8px 11px",
+                fontSize: 40,
+                fontWeight: 500,
+                borderRadius: 8,
+                display: "flex",
+                alignItems: "flex-end",
+                marginLeft: s.count === 5 ? 12 : 0,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 16,
+                  color: "#8e97ad",
+                  marginRight: 12,
+                  display: "flex",
+                }}
+              >
+                {s.count}x
+              </div>
+              <span style={{ fontWeight: 700 }}>{s.stat}</span>
             </div>
-            {stats1}
-          </div>
-          <div
-            style={{
-              flexGrow: 1,
-              flexShrink: 1,
-              flexBasis: 0,
-              background: "#2c3347",
-              padding: "8px 11px",
-              fontSize: 32,
-              fontWeight: 500,
-              borderRadius: 8,
-              display: "flex",
-            }}
-          >
-            <div className="card-stat-desc dimmed">3x</div>
-            {stats2}
-          </div>
-          <div
-            style={{
-              flexGrow: 1,
-              flexShrink: 1,
-              flexBasis: 0,
-              background: "#3a4259",
-              padding: "8px 11px",
-              fontSize: 32,
-              fontWeight: 500,
-              borderRadius: 8,
-              display: "flex",
-            }}
-          >
-            <div className="card-stat-desc dimmed">5x</div>
-            {stats3}
-          </div>
+          ))}
         </div>
         {/* {(skill1desc || skill2desc || skill3desc) && (
           <div className="card-section-title">Skills</div>
